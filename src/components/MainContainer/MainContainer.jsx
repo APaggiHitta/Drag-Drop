@@ -3,6 +3,8 @@ import styles from "./MainContainer.module.css";
 import Header from "../Header/Header";
 import { NavBarMain } from "../NavBarMain/NavBarMain";
 import InfoBox from "../InfoBox/InfoBox";
+import ChartCard from "../ChartCard/ChartCard";
+
 import {
   FaExclamationTriangle,
   FaCog,
@@ -54,6 +56,12 @@ export const MainContainer = () => {
       subtitle: "Efficient",
       bgColor: "#5cb85c",
     },
+    {
+      id: "card-6",
+      title: "Power Usage Chart",
+      component: ChartCard, // Usaremos un componente personalizado aquí
+      bgColor: "#ffffff",
+    },
   ];
 
   const layout = cards.map((card, i) => ({
@@ -82,13 +90,21 @@ export const MainContainer = () => {
             containerPadding={[0, 0]}
           >
             {cards.map((card) => (
-              <div key={card.id} className={styles.gridItem}>
-                <InfoBox
-                  title={card.title}
-                  icon={card.icon}
-                  subtitle={card.subtitle}
-                  bgColor={card.bgColor}
-                />
+              <div
+                key={card.id}
+                className={styles.gridItem}
+                style={{ backgroundColor: card.bgColor }}
+              >
+                {card.component ? (
+                  <card.component />
+                ) : (
+                  <InfoBox
+                    title={card.title}
+                    icon={card.icon}
+                    subtitle={card.subtitle}
+                    bgColor={card.bgColor}
+                  />
+                )}
               </div>
             ))}
           </ReactGridLayout>

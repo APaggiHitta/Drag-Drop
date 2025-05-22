@@ -30,8 +30,37 @@
   width: 100%;
   position: relative;
 }
-
-/* Cada item del grid necesita posicion relativa para que las flechas se ubiquen bien */
 .gridItem {
   position: relative;
+  border-radius: 18px;
+  overflow: visible;
+  background-color: inherit;
+
+  box-sizing: border-box;
+}
+.react-resizable-handle.react-resizable-handle-se {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 10;
+  cursor: se-resize;
+
+  right: 4px !important;
+  bottom: 4px !important;
+
+  /* Agregar fondo para que se vea */
+  background: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 24L24 0h-6l-18 18z'/></svg>")
+    no-repeat center center;
+  background-size: contain;
+  border-radius: 0;
+}
+
+.react-grid-item {
+  overflow: visible !important;
+}
+
+.react-grid-item,
+.react-resizable {
+  position: relative !important;
+  overflow: visible !important;
 }
