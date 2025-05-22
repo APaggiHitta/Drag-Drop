@@ -1,0 +1,32 @@
+.infoBox {
+  border-radius: 12px;
+  padding: 0.5rem;
+  width: 120px;
+  height: 100px; /* altura fija para que todas sean iguales */
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+  flex-shrink: 0; /* evitar que se achiquen */
+  flex-grow: 0; /* evitar que crezcan */
+}
+
+.icon {
+  font-size: 1.3rem; /* icono más pequeño */
+}
+
+.title {
+  font-weight: 700;
+  font-size: 0.9rem; /* título más pequeño */
+  margin: 0;
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 0.75rem; /* subtítulo más pequeño */
+  opacity: 0.85;
+  margin: 0;
+}

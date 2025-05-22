@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  background-color: rgb(
+    248,
+    232,
+    232
+  ); /* solo el fondo general, no a todos los elementos */
+}
