@@ -4,6 +4,8 @@ import Header from "../Header/Header";
 import { NavBarMain } from "../NavBarMain/NavBarMain";
 import InfoBox from "../InfoBox/InfoBox";
 import ChartCard from "../ChartCard/ChartCard";
+import Gauge from "../Gauge/Gauge";
+import Gauge270 from "../Gauge270/Gauge270";
 
 import {
   FaExclamationTriangle,
@@ -59,7 +61,20 @@ export const MainContainer = () => {
     {
       id: "card-6",
       title: "Power Usage Chart",
-      component: ChartCard, // Usaremos un componente personalizado aquí
+      component: ChartCard,
+      bgColor: "#ffffff",
+    },
+    {
+      id: "card-7",
+      title: "Power Usage Chart",
+      component: ChartCard,
+      bgColor: "#ffffff",
+    },
+
+    {
+      id: "card-8",
+      title: "Temperature Gauge",
+      component: Gauge270,
       bgColor: "#ffffff",
     },
   ];

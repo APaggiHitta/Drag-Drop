@@ -38,21 +38,19 @@
 
   box-sizing: border-box;
 }
-.react-resizable-handle.react-resizable-handle-se {
+.react-resizable-handle.react-resizable-handle-se::after {
+  content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
-  z-index: 10;
-  cursor: se-resize;
-
-  right: 4px !important;
-  bottom: 4px !important;
-
-  /* Agregar fondo para que se vea */
-  background: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M0 24L24 0h-6l-18 18z'/></svg>")
-    no-repeat center center;
-  background-size: contain;
-  border-radius: 0;
+  right: 4px;
+  bottom: 4px;
+  width: 14px;
+  height: 14px;
+  background-image: linear-gradient(to bottom right, white 2px, transparent 2px),
+    linear-gradient(to bottom right, white 2px, transparent 2px),
+    linear-gradient(to bottom right, white 2px, transparent 2px);
+  background-position: 0 0, 4px 4px, 8px 8px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .react-grid-item {
